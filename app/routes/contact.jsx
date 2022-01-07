@@ -1,18 +1,4 @@
-
-// function validateName(name) {
-//     if (!name || name.length === 0)
-//         return "Pelase provide a name.";
-// }
-
-// function validateEmail(email) {
-//     if (!email || email.length === 0)
-//         return "Pelase provide a valid email.";
-// }
-
-// function validateMessage(message) {
-//     if (!message || message.length < 10)
-//         return "Message must be at least 10 characters.";
-// }
+export async function action({ request }) { return null; }
 
 export default function ContactRoute() {
     return (
@@ -21,11 +7,7 @@ export default function ContactRoute() {
             <form method="post">
                 <div>
                     <label htmlFor="name">Name: </label>
-                    <input type="text" name="name" id="name"/>
-                </div>
-                <div>
-                    <label htmlFor="email">Email: </label>
-                    <input type="email" name="email" id="email"/>
+                    <input type="text" name="name" id="name" />
                 </div>
                 <div>
                     <label htmlFor="message">Message: </label> <br />
