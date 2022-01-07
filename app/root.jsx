@@ -1,26 +1,42 @@
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-} from "remix";
+import { Links, Link, LiveReload, Outlet, Scripts } from "remix";
+import stylesUrl from './styles/index.css';
 
-export function meta() {
-  return { title: "New Remix App" };
+export function links() {
+  return [{ rel: 'stylesheet', href: stylesUrl }]
+}
+
+function NavBar() {
+  return (
+    <ul className="navbar">
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="about">About</Link>
+      </li>
+      <li>
+        <Link to="contact">Contact</Link>
+      </li>
+      <li>
+        <Link to="projects">Projects</Link>
+      </li>
+    </ul>
+  );
 }
 
 export default function App() {
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <Meta />
         <Links />
       </head>
       <body>
-        <Outlet />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+        <div className="app-container">
+          <h1> Hello world Portfolio </h1>
+          <NavBar />
+          <Outlet />
+          {process.env.NODE_ENV === "development" && <LiveReload />}
+        </div>
       </body>
     </html>
   );
