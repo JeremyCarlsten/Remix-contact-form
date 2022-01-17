@@ -33,3 +33,4 @@ run:
 - [Kent C Dodds Blog](https://kentcdodds.com/blog?q=remix)
 - [Kent C Dodds Youtub](https://www.youtube.com/c/KentCDodds-vids/search?query=remix)
 - [Discord server](https://discord.com/invite/remix)
+- [Testing loaders and actions](https://sergiodxa.com/articles/test-remix-loaders-and-actions)
