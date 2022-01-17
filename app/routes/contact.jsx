@@ -1,4 +1,16 @@
-export async function action({ request }) { return null; }
+import { redirect } from "remix"
+
+export async function action({ request }) {
+    const formData = await request.formData();
+    const name = formData.get('name');
+    const message = formData.get('message');
+
+    console.log('got name:', name);
+    console.log('got message: ', message)
+    
+    return redirect("/contact");
+}
+
 
 export default function ContactRoute() {
     return (

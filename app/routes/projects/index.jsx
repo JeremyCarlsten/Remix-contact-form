@@ -1,4 +1,4 @@
-import { Link } from 'remix';
+import { Link, useLoaderData } from 'remix';
 
 const totalyLegitProjects = [
     { id: 1, name: 'Youtub' },
@@ -7,18 +7,27 @@ const totalyLegitProjects = [
     { id: 4, name: 'InstaPics' }
 ];
 
+export function loader() {
+    //go get stuff from db or whatever.
+    return {data: totalyLegitProjects}
+}
+
 export default function ProjectsRoute() {
+    const {data} = useLoaderData();
+
+    const projectList = data.map((project) => {
+        return (
+            <li key={project.id}>
+                <Link to={`/projects/${project.name}`}>{project.name}</Link>
+            </li>
+        )
+    });
+
     return (
         <div className="projects">
             <h1>Projects</h1>
             <ul className="projects-list">
-                {totalyLegitProjects.map((project) => {
-                    return (
-                        <li key={project.id}>
-                            <Link to={`/projects/${project.name}`}>{project.name}</Link>
-                        </li>
-                    )
-                })}
+                {projectList}
             </ul>
         </div>
     );
