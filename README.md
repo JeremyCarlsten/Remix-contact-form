@@ -1,17 +1,4 @@
 # Remix - A new react framework
-
-
-run: 
-```node
- npx create-remix@latest 
- ```
-
-- What's diferent here than generated.
-    - [X] git init / commit
-    - [X] Setup for the sake of time.
-    - [X] This readme
-
-## What is remix?
     Imagine you took react, react-router and a node server and stuck them in a blender.
     
     Yup. Remix.
@@ -24,6 +11,16 @@ run:
         - she's opinonated
         - VERY new. V1 released late Nov 2021. 
 
+# What Have I already done?
+- Run the create-remix script: 
+   ```node
+    npx create-remix@latest 
+    ```
+
+- What's diferent here than generated.
+    - [X] git init / commit
+    - [X] Setup for the sake of time.
+    - [X] This readme
 
 
 # Further Knowhow: 
